@@ -160,9 +160,10 @@ const ProductView = () => {
         <div
           style={{
             backgroundImage: `url(/assets/product/bg-image.jpg)`,
-            backgroundSize: "contain",
+            backgroundSize: "cover",
             backgroundAttachment: "fixed",
             backgroundPosition: "center",
+            height: "100vh",
           }}
         >
           {/* <nav className="w-full bg-[#8E7E7E] text-white shadow">
@@ -509,7 +510,13 @@ const ProductView = () => {
         </nav> */}
           <div
             className="h-100 pt-16  pb-2 px-8"
-            style={{ backgroundImage: `url(/assets/product/bg-image.jpg)` }}
+            style={{
+              backgroundImage: `url(/assets/product/bg-image.jpg)`,
+              backgroundSize: "cover",
+              backgroundAttachment: "fixed",
+              backgroundPosition: "center",
+              height: "100vh",
+            }}
           >
             <div className="grid grid-cols-4 gap-8">
               <div className="bg-[#D9D9D9] h-96 grid ">
