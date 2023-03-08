@@ -334,23 +334,23 @@ const ProductView = () => {
                 </div>
               </div>
 
-              <div className="bg-[#D9D9D9] h-28"></div>
+              {/* <div className="bg-[#D9D9D9] h-28"></div> */}
             </div>
-            <div className="bg-[#D9D9D9] h-96 px-8 p-6">
+            <div className="bg-[#D9D9D9] px-8 p-4">
               <h1 className="text-center font-bold">Related Items</h1>
-              <div className="h-20 bg-[#C7B4B4] my-6" onClick={showProduct}>
+              <div className="bg-[#C7B4B4] mt-2" onClick={showProduct}>
                 <img
-                  src={"/assets/product/product4.jpg"}
-                  className="h-20 w-full"
+                  src={"/assets/product/product.jpg"}
+                  className="h-20 w-full cursor-pointer"
                   alt="detail product"
                 />
                 <h3 className="bg-[#fff]">Product1: $19.19</h3>
               </div>
 
-              <div className="h-20 bg-[#C7B4B4] my-6" onClick={showProduct}>
+              <div className="bg-[#C7B4B4] mt-6" onClick={showProduct}>
                 <img
                   src={"/assets/product/product4.jpg"}
-                  className="h-20 w-full"
+                  className="h-20 w-full cursor-pointer"
                   alt="detail product"
                 />
                 <h3 className="bg-[#fff]">Product2: $39.22</h3>
@@ -358,8 +358,8 @@ const ProductView = () => {
 
               <div className="h-20 bg-[#C7B4B4] my-6" onClick={showProduct}>
                 <img
-                  src={"/assets/product/product4.jpg"}
-                  className="h-20 w-full"
+                  src={"/assets/product/product2.jpg"}
+                  className="h-20 w-full cursor-pointer"
                   alt="detail product"
                 />
                 <h3 className="bg-[#fff]">Product3: $16.39</h3>
@@ -565,9 +565,9 @@ const ProductView = () => {
                   </p>
                 </div>
               </div>
-              <div className="bg-[#D9D9D9] h-96 px-8 p-6">
+              <div className="bg-[#D9D9D9] px-8 p-6">
                 <h1 className="text-center font-bold">Related Items</h1>
-                <div className="h-20 bg-[#C7B4B4] my-6" onClick={showProduct}>
+                <div className="bg-[#C7B4B4] mt-2" onClick={showProduct}>
                   <img
                     src={"/assets/product/product.jpg"}
                     className="h-20 w-full cursor-pointer"
@@ -576,7 +576,7 @@ const ProductView = () => {
                   <h3 className="bg-[#fff]">Product1: $19.19</h3>
                 </div>
 
-                <div className="h-20 bg-[#C7B4B4] my-6" onClick={showProduct}>
+                <div className="bg-[#C7B4B4] mt-6" onClick={showProduct}>
                   <img
                     src={"/assets/product/product4.jpg"}
                     className="h-20 w-full cursor-pointer"
