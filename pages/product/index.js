@@ -18,6 +18,7 @@ const ProductView = () => {
     "/assets/product/product2.jpg",
     "/assets/product/product3.jpg",
     "/assets/product/product4.jpg",
+    "/assets/product/product5.jpg",
   ];
   const [navbar, setNavbar] = useState(false);
   const [imagePath, setImagePath] = useState("");
@@ -158,6 +159,7 @@ const ProductView = () => {
 
       {screenSize?.width <= 480 ? (
         <div
+          className="pb-14"
           style={{
             backgroundImage: `url(/assets/product/bg-image.jpg)`,
             backgroundSize: "cover",
@@ -263,49 +265,66 @@ const ProductView = () => {
               alt="detail product"
             />
           </div>
-          <div className="grid place-items-center py-3 bg-[#d9d9d9] mt-3">
-            <div className="grid grid-cols-5 gap-8">
-              <div className="h-8 w-8"></div>
-              <div
-                className="bg-[#D9D9D9] h-8 w-8 cursor-pointer border border-gray-400"
-                onClick={() => setFrameImg("/assets/product/product.jpg")}
-              >
-                <img
-                  src={"/assets/product/product.jpg"}
-                  style={{ height: "100%", width: "100%" }}
-                  alt="detail product"
-                />
-              </div>
-              <div
-                className="bg-[#D9D9D9] h-8 w-8 cursor-pointer border border-gray-400"
-                onClick={() => setFrameImg("/assets/product/product2.jpg")}
-              >
-                <img
-                  src={"/assets/product/product2.jpg"}
-                  style={{ height: "100%", width: "100%" }}
-                  alt="detail product"
-                />
-              </div>
-              <div
-                className="bg-[#D9D9D9] h-8 w-8 cursor-pointer border border-gray-400"
-                onClick={() => setFrameImg("/assets/product/product3.jpg")}
-              >
-                <img
-                  src={"/assets/product/product3.jpg"}
-                  style={{ height: "100%", width: "100%" }}
-                  alt="detail product"
-                />
-              </div>
-              <div className="flex justify-end items-center">
-                <FiArrowRight
-                  className="text-[#00000070] cursor-pointer h-7 w-auto"
-                  onClick={() => {
-                    setFrameImg(
-                      imgArr[Math.floor(Math.random() * imgArr.length)]
-                    );
-                  }}
-                />
-              </div>
+          <div className="flex justify-center items-center space-x-6 bg-[#D9D9D9] rounded-md h-fit p-3 mt-3">
+            <div
+              className="h-9 rounded w-9 cursor-pointer border-2 p-0.5 border-gray-600"
+              onClick={() => setFrameImg("/assets/product/product.jpg")}
+            >
+              <img
+                src={"/assets/product/product.jpg"}
+                style={{ height: "100%", width: "100%" }}
+                alt="detail product"
+              />
+            </div>
+            <div
+              className="h-9 rounded w-9 cursor-pointer border-2 p-0.5 border-gray-600"
+              onClick={() => setFrameImg("/assets/product/product2.jpg")}
+            >
+              <img
+                src={"/assets/product/product2.jpg"}
+                style={{ height: "100%", width: "100%" }}
+                alt="detail product"
+              />
+            </div>
+            <div
+              className="h-9 rounded w-9 cursor-pointer border-2 p-0.5 border-gray-600"
+              onClick={() => setFrameImg("/assets/product/product3.jpg")}
+            >
+              <img
+                src={"/assets/product/product3.jpg"}
+                style={{ height: "100%", width: "100%" }}
+                alt="detail product"
+              />
+            </div>
+            <div
+              className="h-9 rounded w-9 cursor-pointer border-2 p-0.5 border-gray-600"
+              onClick={() => setFrameImg("/assets/product/product4.jpg")}
+            >
+              <img
+                src={"/assets/product/product4.jpg"}
+                style={{ height: "100%", width: "100%" }}
+                alt="detail product"
+              />
+            </div>
+            <div
+              className="h-9 rounded w-9 cursor-pointer border-2 p-0.5 border-gray-600"
+              onClick={() => setFrameImg("/assets/product/product5.jpg")}
+            >
+              <img
+                src={"/assets/product/product5.jpg"}
+                style={{ height: "100%", width: "100%" }}
+                alt="detail product"
+              />
+            </div>
+            <div className="flex justify-end items-center">
+              <FiArrowRight
+                className="text-[#00000070] cursor-pointer h-7 w-auto"
+                onClick={() => {
+                  setFrameImg(
+                    imgArr[Math.floor(Math.random() * imgArr.length)]
+                  );
+                }}
+              />
             </div>
           </div>
           <div className="grid grid-cols-1 gap-8 my-4">
@@ -376,57 +395,55 @@ const ProductView = () => {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-1 gap-8 my-4">
-            <div className="bg-[#D9D9D9]  px-8 p-6 ">
-              <h1 className="text-center font-bold">Reviews</h1>
-              <div className="relative bg-[#C7B4B4] mt-6 p-4 mb-2">
-                <FiArrowLeft
-                  className="absolute text-2xl text-white cursor-pointer"
-                  style={{ left: -25, top: "45%" }}
-                  onClick={mobilePrevious}
-                />
-                <img
-                  src={reviews[mobileReviewIndex].image}
-                  className="w-14 h-14 rounded-full mx-auto"
-                  alt="detail product"
-                />
-                <h3 className="text-center my-1 font-bold">
-                  {reviews[mobileReviewIndex].name}
-                </h3>
-                <p className="text-center">
-                  {reviews[mobileReviewIndex].designation}
-                </p>
-                <p className="text-center">
-                  {`"${reviews[mobileReviewIndex].description}"`}
-                </p>
-                <FiArrowRight
-                  className="absolute text-2xl text-white cursor-pointer"
-                  style={{ right: -25, top: "45%" }}
-                  onClick={mobileNext}
-                />
-              </div>
-              <div className="text-center">
-                {reviews.map((item, index) => {
-                  return (
-                    <>
-                      {index === mobileReviewIndex ? (
-                        <RxDotFilled className="inline-block" key={index} />
-                      ) : (
-                        <RxDot className="inline-block" key={index} />
-                      )}
-                    </>
-                  );
-                })}
-              </div>
+          <div className="bg-[#D9D9D9]  px-8 p-6">
+            <h1 className="text-center font-bold">Reviews</h1>
+            <div className="relative bg-[#C7B4B4] mt-6 p-4 mb-2">
+              <FiArrowLeft
+                className="absolute text-2xl text-white cursor-pointer"
+                style={{ left: -25, top: "45%" }}
+                onClick={mobilePrevious}
+              />
+              <img
+                src={reviews[mobileReviewIndex].image}
+                className="w-14 h-14 rounded-full mx-auto"
+                alt="detail product"
+              />
+              <h3 className="text-center my-1 font-bold">
+                {reviews[mobileReviewIndex].name}
+              </h3>
+              <p className="text-center">
+                {reviews[mobileReviewIndex].designation}
+              </p>
+              <p className="text-center">
+                {`"${reviews[mobileReviewIndex].description}"`}
+              </p>
+              <FiArrowRight
+                className="absolute text-2xl text-white cursor-pointer"
+                style={{ right: -25, top: "45%" }}
+                onClick={mobileNext}
+              />
+            </div>
+            <div className="text-center">
+              {reviews.map((item, index) => {
+                return (
+                  <>
+                    {index === mobileReviewIndex ? (
+                      <RxDotFilled className="inline-block" key={index} />
+                    ) : (
+                      <RxDot className="inline-block" key={index} />
+                    )}
+                  </>
+                );
+              })}
+            </div>
 
-              {/* <div className="h-20 bg-[#C7B4B4] my-6" onClick={showProduct}>
+            {/* <div className="h-20 bg-[#C7B4B4] my-6" onClick={showProduct}>
                           
                 </div>
 
                 <div className="h-20 bg-[#C7B4B4] my-6" onClick={showProduct}>
                           
                 </div> */}
-            </div>
           </div>
         </div>
       ) : (
@@ -607,49 +624,66 @@ const ProductView = () => {
             </div>
 
             <div className="grid grid-cols-4 gap-8 my-4">
-              <div className="grid place-items-center bg-[#D9D9D9] rounded-md h-fit p-3">
-                <div className="grid grid-cols-5 gap-8">
-                  <div className="h-8 w-8"></div>
-                  <div
-                    className="bg-[#D9D9D9] h-8 w-8 cursor-pointer border border-gray-400"
-                    onClick={() => setFrameImg("/assets/product/product.jpg")}
-                  >
-                    <img
-                      src={"/assets/product/product.jpg"}
-                      style={{ height: "100%", width: "100%" }}
-                      alt="detail product"
-                    />
-                  </div>
-                  <div
-                    className="bg-[#D9D9D9] h-8 w-8 cursor-pointer border border-gray-400"
-                    onClick={() => setFrameImg("/assets/product/product2.jpg")}
-                  >
-                    <img
-                      src={"/assets/product/product2.jpg"}
-                      style={{ height: "100%", width: "100%" }}
-                      alt="detail product"
-                    />
-                  </div>
-                  <div
-                    className="bg-[#D9D9D9] h-8 w-8 cursor-pointer border border-gray-400"
-                    onClick={() => setFrameImg("/assets/product/product3.jpg")}
-                  >
-                    <img
-                      src={"/assets/product/product3.jpg"}
-                      style={{ height: "100%", width: "100%" }}
-                      alt="detail product"
-                    />
-                  </div>
-                  <div className="flex justify-end items-center">
-                    <FiArrowRight
-                      className="text-[#00000070] cursor-pointer h-7 w-auto"
-                      onClick={() => {
-                        setFrameImg(
-                          imgArr[Math.floor(Math.random() * imgArr.length)]
-                        );
-                      }}
-                    />
-                  </div>
+              <div className="flex justify-center items-center space-x-6 bg-[#D9D9D9] rounded-md h-fit p-3">
+                <div
+                  className="h-9 rounded w-9 cursor-pointer border-2 p-0.5 border-gray-600"
+                  onClick={() => setFrameImg("/assets/product/product.jpg")}
+                >
+                  <img
+                    src={"/assets/product/product.jpg"}
+                    style={{ height: "100%", width: "100%" }}
+                    alt="detail product"
+                  />
+                </div>
+                <div
+                  className="h-9 rounded w-9 cursor-pointer border-2 p-0.5 border-gray-600"
+                  onClick={() => setFrameImg("/assets/product/product2.jpg")}
+                >
+                  <img
+                    src={"/assets/product/product2.jpg"}
+                    style={{ height: "100%", width: "100%" }}
+                    alt="detail product"
+                  />
+                </div>
+                <div
+                  className="h-9 rounded w-9 cursor-pointer border-2 p-0.5 border-gray-600"
+                  onClick={() => setFrameImg("/assets/product/product3.jpg")}
+                >
+                  <img
+                    src={"/assets/product/product3.jpg"}
+                    style={{ height: "100%", width: "100%" }}
+                    alt="detail product"
+                  />
+                </div>
+                <div
+                  className="h-9 rounded w-9 cursor-pointer border-2 p-0.5 border-gray-600"
+                  onClick={() => setFrameImg("/assets/product/product4.jpg")}
+                >
+                  <img
+                    src={"/assets/product/product4.jpg"}
+                    style={{ height: "100%", width: "100%" }}
+                    alt="detail product"
+                  />
+                </div>
+                <div
+                  className="h-9 rounded w-9 cursor-pointer border-2 p-0.5 border-gray-600"
+                  onClick={() => setFrameImg("/assets/product/product5.jpg")}
+                >
+                  <img
+                    src={"/assets/product/product5.jpg"}
+                    style={{ height: "100%", width: "100%" }}
+                    alt="detail product"
+                  />
+                </div>
+                <div className="flex justify-end items-center">
+                  <FiArrowRight
+                    className="text-[#00000070] cursor-pointer h-7 w-auto"
+                    onClick={() => {
+                      setFrameImg(
+                        imgArr[Math.floor(Math.random() * imgArr.length)]
+                      );
+                    }}
+                  />
                 </div>
               </div>
 
