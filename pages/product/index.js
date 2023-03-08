@@ -321,7 +321,7 @@ const ProductView = () => {
                 </p>
               </div>
 
-              <div className=" h-40">
+              <div className="h-40">
                 <div className="text-black font-bold py-2 px-4">$19.99</div>
                 <div className="py-2 px-4">
                   <button className="bg-yellow-50 hover:bg-yellow-100 text-black py-1 px-4 rounded-lg text-xs">
@@ -344,6 +344,7 @@ const ProductView = () => {
                   className="h-20 w-full"
                   alt="detail product"
                 />
+                <h3 className="bg-[#fff]">Product1: $19.19</h3>
               </div>
 
               <div className="h-20 bg-[#C7B4B4] my-6" onClick={showProduct}>
@@ -352,6 +353,7 @@ const ProductView = () => {
                   className="h-20 w-full"
                   alt="detail product"
                 />
+                <h3 className="bg-[#fff]">Product2: $39.22</h3>
               </div>
 
               <div className="h-20 bg-[#C7B4B4] my-6" onClick={showProduct}>
@@ -360,6 +362,7 @@ const ProductView = () => {
                   className="h-20 w-full"
                   alt="detail product"
                 />
+                <h3 className="bg-[#fff]">Product3: $16.39</h3>
               </div>
             </div>
           </div>
