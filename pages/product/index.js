@@ -254,16 +254,16 @@ const ProductView = () => {
                   </div>
               </div>
           </nav> */}
-          <div className="bg-[#D9D9D9] h-96 grid ">
+          <div className="bg-[#D9D9D9] p-5 rounded-md h-96">
             <img
               src={frameImg}
-              className="h-96"
+              className="w-full h-full object-cover"
               style={{ width: "100%" }}
               onClick={() => zoomImage(frameImg)}
               alt="detail product"
             />
           </div>
-          <div className=" h-12 grid place-items-center py-4">
+          <div className="grid place-items-center py-3 bg-[#d9d9d9] mt-3">
             <div className="grid grid-cols-5 gap-8">
               <div className="h-8 w-8"></div>
               <div
@@ -296,9 +296,9 @@ const ProductView = () => {
                   alt="detail product"
                 />
               </div>
-              <div className="h-8 w-8">
+              <div className="flex justify-end items-center">
                 <FiArrowRight
-                  className="text-[#D9D9D9] text-2xl cursor-pointer"
+                  className="text-[#00000070] cursor-pointer h-7 w-auto"
                   onClick={() => {
                     setFrameImg(
                       imgArr[Math.floor(Math.random() * imgArr.length)]
@@ -309,9 +309,9 @@ const ProductView = () => {
             </div>
           </div>
           <div className="grid grid-cols-1 gap-8 my-4">
-            <div className="  h-96">
-              <div className="bg-[#D9D9D9]">
-                <h4 className="font-bold px-4">Description : </h4>
+            <div className="">
+              <div className="bg-[#D9D9D9] rounded-md py-4 px-3">
+                <h4 className="font-bold px-4">Description :</h4>
                 <p className="text-sm px-4 pb-2">
                   {"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.".slice(
                     0,
@@ -321,8 +321,8 @@ const ProductView = () => {
                 </p>
               </div>
 
-              <div className="h-40">
-                <div className="text-black font-bold py-2 px-4">$19.99</div>
+              <div className="">
+                <div className="text-white font-bold py-2 px-4">$19.99</div>
                 <div className="py-2 px-4">
                   <button className="bg-yellow-50 hover:bg-yellow-100 text-black py-1 px-4 rounded-lg text-xs">
                     Add To Cart
@@ -332,11 +332,21 @@ const ProductView = () => {
                     Add To Favorite
                   </button>
                 </div>
+                <div className="bg-[#D9D9D9] py-4 px-3 rounded-md mt-10">
+                  <h4 className="font-bold px-4">More info :</h4>
+                  <p className="text-sm px-4">
+                    {"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.".slice(
+                      0,
+                      screenSize.width > 1024 ? 400 : 200
+                    )}{" "}
+                    ...
+                  </p>
+                </div>
               </div>
 
               {/* <div className="bg-[#D9D9D9] h-28"></div> */}
             </div>
-            <div className="bg-[#D9D9D9] px-8 p-4">
+            <div className="bg-[#D9D9D9] px-8 p-4 rounded-md">
               <h1 className="text-center font-bold">Related Items</h1>
               <div className="bg-[#C7B4B4] mt-2" onClick={showProduct}>
                 <img
@@ -367,7 +377,7 @@ const ProductView = () => {
             </div>
           </div>
           <div className="grid grid-cols-1 gap-8 my-4">
-            <div className="bg-[#D9D9D9]  px-8 p-6">
+            <div className="bg-[#D9D9D9]  px-8 p-6 ">
               <h1 className="text-center font-bold">Reviews</h1>
               <div className="relative bg-[#C7B4B4] mt-6 p-4 mb-2">
                 <FiArrowLeft
@@ -510,27 +520,27 @@ const ProductView = () => {
               
           </div>
         </nav> */}
+
           <div
-            className="h-100 pt-16  pb-2 px-8"
+            className="pt-16 pb-10 px-8"
             style={{
               backgroundImage: `url(/assets/product/bg-image.jpg)`,
               backgroundSize: "cover",
               backgroundAttachment: "fixed",
               backgroundPosition: "center",
-              height: "100vh",
             }}
           >
             <div className="grid grid-cols-4 gap-8">
-              <div className="bg-[#D9D9D9] h-96 grid ">
+              <div className="bg-[#D9D9D9] p-5 rounded-md">
                 <img
                   src={frameImg}
-                  style={{ width: "100%", height: "100%" }}
+                  className="w-full h-full object-cover"
                   onClick={() => zoomImage(frameImg)}
                   alt="detail product"
                 />
               </div>
-              <div className="col-span-2  h-96">
-                <div className="bg-[#D9D9D9] h-28">
+              <div className="col-span-2">
+                <div className="bg-[#D9D9D9] rounded-md py-4 px-3">
                   <h4 className="font-bold px-4">Description :</h4>
                   <p className="text-sm px-4">
                     {"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.".slice(
@@ -541,8 +551,8 @@ const ProductView = () => {
                   </p>
                 </div>
 
-                <div className=" h-40">
-                  <div className="text-black font-bold py-2 px-4">$19.99</div>
+                <div className="mt-4">
+                  <div className="text-white font-bold py-2 px-4">$19.99</div>
                   <div className="py-2 px-4">
                     <button className="bg-yellow-50 hover:bg-yellow-100 text-black py-1 px-4 rounded-lg text-xs">
                       Add To Cart
@@ -554,7 +564,7 @@ const ProductView = () => {
                   </div>
                 </div>
 
-                <div className="bg-[#D9D9D9] h-28">
+                <div className="bg-[#D9D9D9] py-4 px-3 rounded-md mt-10">
                   <h4 className="font-bold px-4">More info :</h4>
                   <p className="text-sm px-4">
                     {"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.".slice(
@@ -565,7 +575,7 @@ const ProductView = () => {
                   </p>
                 </div>
               </div>
-              <div className="bg-[#D9D9D9] px-8 p-6">
+              <div className="bg-[#D9D9D9] px-8 p-6 rounded-md">
                 <h1 className="text-center font-bold">Related Items</h1>
                 <div className="bg-[#C7B4B4] mt-2" onClick={showProduct}>
                   <img
@@ -597,7 +607,7 @@ const ProductView = () => {
             </div>
 
             <div className="grid grid-cols-4 gap-8 my-4">
-              <div className=" h-12 grid place-items-center">
+              <div className="grid place-items-center bg-[#D9D9D9] rounded-md h-fit p-3">
                 <div className="grid grid-cols-5 gap-8">
                   <div className="h-8 w-8"></div>
                   <div
@@ -630,9 +640,9 @@ const ProductView = () => {
                       alt="detail product"
                     />
                   </div>
-                  <div className="h-8 w-8">
+                  <div className="flex justify-end items-center">
                     <FiArrowRight
-                      className="text-[#D9D9D9] text-2xl cursor-pointer"
+                      className="text-[#00000070] cursor-pointer h-7 w-auto"
                       onClick={() => {
                         setFrameImg(
                           imgArr[Math.floor(Math.random() * imgArr.length)]
@@ -643,8 +653,8 @@ const ProductView = () => {
                 </div>
               </div>
 
-              <div className="bg-[#D9D9D9] h-38 grid place-items-center col-span-3">
-                <h1 className="text-center font-bold h-2">Reviews</h1>
+              <div className="bg-[#D9D9D9] rounded-md grid place-items-center col-span-3 pb-4">
+                <h1 className="text-center font-bold mt-4">Reviews</h1>
                 <div className="relative grid grid-cols-3 gap-24">
                   <FiArrowLeft
                     className="absolute text-2xl text-white cursor-pointer"

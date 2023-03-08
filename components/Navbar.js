@@ -58,11 +58,11 @@ export default function Navbar() {
         </button>
         <div className="hidden md:flex md:items-center md:justify-between ">
           <ul className="flex flex-col md:flex-row md:items-center md:justify-between md:space-x-6">
-            <li>
+            {/* <li>
               <Link href="/product">
                 <a className="nav-link hover:text-white">Product</a>
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link href="/history">
                 <a className="nav-link hover:text-white">History</a>
