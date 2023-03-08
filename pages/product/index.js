@@ -560,11 +560,19 @@ const ProductView = () => {
                 <div className="bg-[#D9D9D9] rounded-md py-4 px-3">
                   <h4 className="font-bold px-4">Description :</h4>
                   <p className="text-sm px-4">
-                    {"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.".slice(
+                    আপনি কি আমাকে Payoneer এ টাকা টা সেন্ড করতে পারবেন? $20 আমার
+                    Payoneer Account আছে। Payonner এ না হলে Bkash বা অন্য কোন
+                    উপায়ে দিতে পারবেন? টাকা হাতে না পেয়ে আমি কিভাবে সোর্স কোড
+                    দেই? আমার Discord: Friyad#3814 <br /> আমার Skype:
+                    https://join.skype.com/invite/tkXgfx8gjPs2
+                    <br />
+                    এগুলো নিয়ে ফাইবারে কথা বলা যাবে না। তাই এখানে বল্লাম। আমাকে
+                    Discord অথবা Skype তে মেসেজ দিয়ে জানান।
+                    {/* {"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.".slice(
                       0,
                       screenSize.width > 1024 ? 400 : 200
                     )}{" "}
-                    ...
+                    ... */}
                   </p>
                 </div>
 
