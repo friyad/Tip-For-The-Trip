@@ -163,7 +163,6 @@ const ProductView = () => {
             backgroundSize: "cover",
             backgroundAttachment: "fixed",
             backgroundPosition: "center",
-            height: "100vh",
           }}
         >
           {/* <nav className="w-full bg-[#8E7E7E] text-white shadow">
